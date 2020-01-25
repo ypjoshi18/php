@@ -19,7 +19,7 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center">Enter Data Here!</h5>
-            <form class="form-signin"  method="post" action="/Views/updateData.php">
+            <form class="form-signin"  method="post" action="/controller/updateData.php">
               <div class="form-label-group">
                 <input type="text" id="name" name="name" class="form-control" placeholder="Email address" required>
                 <label for="inputEmail">Name</label>
