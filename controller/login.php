@@ -13,12 +13,12 @@ if (isset($_POST['submit']))
         $ruser = $row["username"];
         $rpass = $row["password"];       
     }
-    if ($username == $ruser && $password == $rpass) header("Location: /views/dashboard.php");
-    else
+    
+    if ($username == $ruser && $password == $rpass)
     {
-        header("location:login.php");
-        echo 'Invalid Username / Password';
-        exit();
+        header("Location: /views/dashboard.php");
+        exit(0);
     }
+    $_SESSION['error'] = 'invalid_credentials';
+    header("location: /views/login.php");   
 }
-?>
