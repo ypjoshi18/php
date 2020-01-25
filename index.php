@@ -1,5 +1,8 @@
 <?php
 session_start();
-if (!(isset($_SESSION['user']) && $_SESSION['user'] != '')) header ("Location: /views/login.php");
-if (isset($_SESSION['user'])) header ("Location: /views/dashboard.php")
+if (!empty($_SESSION['user'])) {
+    header ("Location: /views/login.php");
+    exit(0);
+}
+header ("Location: /views/dashboard.php");
 ?>
