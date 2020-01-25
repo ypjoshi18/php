@@ -20,5 +20,6 @@ if (isset($_POST['submit']))
         echo ($row["name"]);
         echo ($row["mobno"]);     
     }
+    header ("location: /views/login.php");
 }
 ?>

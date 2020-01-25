@@ -1,6 +1,6 @@
 <html>
 <head>
-  <a href="Views/SignUp.html"></a>
+  <a href="views/SignUp.html"></a>
   <title>Update</title>
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/assets/login.css" />
@@ -19,7 +19,7 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center">Enter Data Here!</h5>
-            <form class="form-signin"  method="post" action="/controller/updateData.php">
+            <form class="form-signin"  method="post" action="/controller/update-data.php">
               <div class="form-label-group">
                 <input type="text" id="name" name="name" class="form-control" placeholder="Email address" required>
                 <label for="inputEmail">Name</label>

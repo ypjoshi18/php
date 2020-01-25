@@ -1,6 +1,6 @@
 <html>
 <head>
-  <a href="Views/SignUp.html"></a>
+  <a href="views/SignUp.html"></a>
   <title>Log In</title>
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/assets/login.css" />
@@ -20,7 +20,7 @@
           <div class="card-body">
             <h5 class="card-title text-center">Sign In</h5>
               <?php include('error-messages.php');?>
-            <form class="form-signin"  method="post" action="/Views/post-login.php">
+            <form class="form-signin"  method="post" action="/controller/login.php">
               <div class="form-label-group">
                 <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required>
                 <label for="inputEmail">Email address</label>
@@ -34,7 +34,7 @@
               <button name="submit" value="submit" class="btn btn-lg btn btn-primary btn-block text-uppercase"
                 type="submit" >Sign in</button>
               <hr class="my-4">
-              <button class="btn btn-lg btn-dark btn-block text-uppercase" onclick="window.location.href = '/Views/signup.php'" type="submit">New?...click for new account</button>
+              <button class="btn btn-lg btn-dark btn-block text-uppercase" onclick="window.location.href = '/views/signup.php'" type="submit">New?...click for new account</button>
             </form>
           </div>
         </div>

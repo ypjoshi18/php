@@ -11,7 +11,7 @@
 		<div class="wrapper">
 			<div class="inner">
 				<img src="/assets/images/image-1.png" alt="" class="image-1">
-				<form action="/Views/post-signup.php"  method="post">
+				<form action="/controller/show-data.php"  method="post">
 					<h3>New Account?</h3>
 					<div class="form-holder">
 						<span class="lnr lnr-user"></span>

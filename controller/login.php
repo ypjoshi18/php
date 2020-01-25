@@ -13,7 +13,7 @@ if (isset($_POST['submit']))
         $ruser = $row["username"];
         $rpass = $row["password"];       
     }
-    if ($username == $ruser && $password == $rpass) header("Location: /views/post-login.php");
+    if ($username == $ruser && $password == $rpass) header("Location: /views/dashboard.php");
     else
     {
         header("location:login.php");
