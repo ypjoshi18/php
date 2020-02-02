@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if (isset($_SESSION['error']) && 'invalid_credentials' === $_SESSION['error']) {
     unset($_SESSION['error']);
 ?>

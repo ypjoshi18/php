@@ -16,9 +16,10 @@ if (isset($_POST['submit']))
     
     if ($username == $ruser && $password == $rpass)
     {
-        header("Location: /views/dashboard.php");
+        header("Location: /views/show-all-data.php");
         exit(0);
     }
     $_SESSION['error'] = 'invalid_credentials';
     header("location: /views/login.php");   
 }
+?>

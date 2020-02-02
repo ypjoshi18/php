@@ -1,8 +1,9 @@
 <?php
 session_start();
-$username = $_SESSION['user'];
+$userid = $_GET['u'];
 $conn = mysqli_connect('localhost' , 'root' , '' ,'information');
-$rquery = "DELETE FROM users where username ='" .$username. "'";
+$rquery = "DELETE FROM users where id ='" .$userid. "'";
 $res = mysqli_query($conn,$rquery);
+if ($res) header("location: /views/delete-page.php")
 ?>
-<p>Your Data is Succesfully Deleted!!</p>
+

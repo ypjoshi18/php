@@ -1,6 +1,8 @@
+<?php
+    //include __DIR__.'/../includes/session.php';
+?>
 <html>
 <head>
-  <a href="views/SignUp.html"></a>
   <title>Log In</title>
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/assets/login.css" />

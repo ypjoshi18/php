@@ -1,3 +1,6 @@
+<?php
+    include __DIR__.'/../includes/session.php';
+?>
 <html>
     <head>
         <title>Success</title>
