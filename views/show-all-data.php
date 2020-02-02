@@ -24,31 +24,25 @@
                 <?php
                 for ($arrayindex=0;$arrayindex<$count;$arrayindex++){
                     $srno = $arrayindex+1;
+                    
+                    $userId = $userArray[$arrayindex][1];
+                    
                 ?>
                 <tr>
                     <th scope='row'><?php echo $srno ?></th>
                     <td id="name<?php echo $arrayindex; ?>" ><?php echo $userArray[$arrayindex][0] ?></td>
-                    <td><a onclick="update('<?php echo $userArray[$arrayindex][1] ?>')">Update!</a></td>
-                    <td><a onclick="confirmation('<?php echo $userArray[$arrayindex][1] ?>')">Delete!</a></td>
-                    <td><a onclick="read('<?php echo $userArray[$arrayindex][1] ?>')">Read!</a></td>
+                    <td><a class="btn btn-update" href="/views/update-page.php?u=<?=$userId?>">Update!</a></td>
+                    <td><a class="btn" onclick="confirmation('<?=$userId?>')">Delete!</a></td>
+                    <td><a class="btn" href="/views/read-data.php?u=<?=$userId?>">Read!</a></td>
                 </tr>
                 <?php } ?>
         </table>
     <script type="text/javascript">
+        
         function confirmation(user)
         {
             var result = confirm("Want to delete?");
             if (result) window.location.href ="/controller/delete-data.php?u=" + user;  
-        }
-        function update(user) {
-   
-         window.location = '/views/update-page.php?u=' + user;  
-        }
-        </script>
-        <script type="text/javascript">
-        function read(user)
-        { 
-            window.location = '/views/read-data.php?u=' + user;
         }
     </script>
     </body>
