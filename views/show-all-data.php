@@ -23,9 +23,7 @@
                 <?php
                 for ($arrayindex=0;$arrayindex<count($userArray);$arrayindex++){
                     $srno = $arrayindex+1;
-                    
                     $userId = $userArray[$arrayindex]['id'];
-                    
                 ?>
                 <tr>
                     <th scope='row'><?php echo $srno ?></th>
