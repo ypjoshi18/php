@@ -7,7 +7,6 @@
     </head>
     <?php
     include __DIR__.'/../controller/show-all-data.php';
-    $count = $_SESSION['num_of_rows'];
     ?>
     <body>
         <table table class="table table-striped">
@@ -22,15 +21,15 @@
             </thead>
             <tbody>
                 <?php
-                for ($arrayindex=0;$arrayindex<$count;$arrayindex++){
+                for ($arrayindex=0;$arrayindex<count($userArray);$arrayindex++){
                     $srno = $arrayindex+1;
                     
-                    $userId = $userArray[$arrayindex][1];
+                    $userId = $userArray[$arrayindex]['id'];
                     
                 ?>
                 <tr>
                     <th scope='row'><?php echo $srno ?></th>
-                    <td id="name<?php echo $arrayindex; ?>" ><?php echo $userArray[$arrayindex][0] ?></td>
+                    <td id="name<?php echo $arrayindex; ?>" ><?php echo $userArray[$arrayindex]['username'] ?></td>
                     <td><a class="btn btn-update" href="/views/update-page.php?u=<?=$userId?>">Update!</a></td>
                     <td><a class="btn" onclick="confirmation('<?=$userId?>')">Delete!</a></td>
                     <td><a class="btn" href="/views/read-data.php?u=<?=$userId?>">Read!</a></td>

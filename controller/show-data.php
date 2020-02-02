@@ -20,6 +20,7 @@ if (isset($_POST['submit']))
         echo ($row["name"]);
         echo ($row["mobno"]);     
     }
+    mysqli_close($conn);
     header ("location: /views/login.php");
 }
 ?>

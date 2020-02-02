@@ -11,6 +11,7 @@ if (isset($_POST['submit']))
     if (!$conn) die("Failed");
     $uquery = "UPDATE users SET name = '$name' , mobno = '$mobno' , password = '$password' WHERE id = '$userid'";
     $res = mysqli_query($conn,$uquery);
+    mysqli_close($conn);
     if($res) header("location: /views/post-update.php");
 }
 ?>

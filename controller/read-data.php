@@ -11,3 +11,4 @@ while ($row = mysqli_fetch_assoc($res))
         $mob = $row["mobno"]; 
         $pass = $row['password'];
     }
+mysqli_close($conn);

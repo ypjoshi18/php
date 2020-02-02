@@ -16,6 +16,7 @@ if (isset($_POST['submit']))
     
     if ($username == $ruser && $password == $rpass)
     {
+        mysqli_close($conn);
         header("Location: /views/show-all-data.php");
         exit(0);
     }
